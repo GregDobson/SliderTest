@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="   ">
+       <script src='testSlider.js'></script>
+    <style>
+        canvas {
+        border:3px solid #d3d3d3;
+        background-color: #f1f1f1;
+        }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 400px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+
+    .slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+
+}
+ .scale1 {
+  display: flex;
+     align-items: center;
+  justify-content: space-between;
+    width: 190px;
+}  
+    
+    
+    
+    
+    </style>
+     
+   </head>
+<body >
+   <h1></h1>
+
+    
+    
+    
+  <table>
+  <tr>
+    <td><p><center>Arrival Rate = <span id="arrivalRateValue"></span></center></p>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="10" step="0.1" 
+               value="5" class="slider" id="arrivalRate"  
+               oninput="document.getElementById('arrivalRateValue').innerHTML = Number(this.value).toFixed(1);"
+               onmouseup="document.getElementById('arrivalRateMouseUp').innerHTML = Number(this.value).toFixed(1);">
+          <div class="scale1" >
+                 <div>1.0</div>
+                <div>3.0</div>
+                <div>5.0</div>
+              <div>7.0</div>
+                <div>9.0</div>
+          </div>
+        <p>Final Value: <span id="arrivalRateMouseUp"></span></p>
+        </div></td>    
+      
+    <td><p><center>Arrival CV = <span id="arrivalCVValue"></span></center></p>
+      <div class="slidecontainer">
+        <input type="range" min="0" max="2" step="0.1" 
+               value="1" class="slider" id="arrivalCV"  
+               oninput="document.getElementById('arrivalCVValue').innerHTML = Number(this.value).toFixed(1);"
+               onmouseup="document.getElementById('arrivalCVMouseUp').innerHTML = Number(this.value).toFixed(1);">
+          <div class="scale1" >
+                 <div>0.0</div>     
+                <div>1.0</div> 
+                <div>2.0</div>
+          </div>
+        <p>Final Value: <span id="arrivalCVMouseUp"></span></p>
+        </div></td>
+      
+  </tr>
+  <tr>
+      <td><p><center>Service Rate = <span id="serviceRateValue"></span></center></p>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="10" step="0.1" 
+               value="5" class="slider" id="serviceRatee"  
+               oninput="document.getElementById('serviceRateValue').innerHTML = Number(this.value).toFixed(1);"
+               onmouseup="document.getElementById('serviceRateMouseUp').innerHTML = Number(this.value).toFixed(1);">
+          <div class="scale1" >
+                 <div>1.0</div>
+                <div>3.0</div>
+                <div>5.0</div>
+              <div>7.0</div>
+                <div>9.0</div>
+          </div>
+        <p>Final Value: <span id="serviceRateMouseUp"></span></p>
+        </div></td>
+        
+      
+    <td><p><center>Service CV = <span id="serviceCVValue"></span></center></p>
+      <div class="slidecontainer">
+        <input type="range" min="0" max="2" step="0.1" 
+               value="1" class="slider" id="serviceCV"  
+               oninput="document.getElementById('serviceCVValue').innerHTML = Number(this.value).toFixed(1);"
+               onmouseup="document.getElementById('serviceCVMouseUp').innerHTML = Number(this.value).toFixed(1);">
+          <div class="scale1" >
+                 <div>0.0</div>   
+                <div>1.0</div>
+                <div>2.0</div>
+          </div>
+        <p>Final Value: <span id="serviceCVMouseUp"></span></p>
+        </div></td>
+      <script>
+          
+      </script>
+  </tr>
+  <tr>
+    <td><p>Speed</p></td>
+  </tr>
+ </table> 
+ <h2> here is my h2 addition and here is more stuff</h2>
+    
+
+
+
+</body>
+      
+</html> 
